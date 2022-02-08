@@ -1,0 +1,20 @@
+{
+  "name": "fitzwilly",
+  "version": "0.0.1",
+  "description": "Inspired by the movie of the same name.",
+  "main": "index.js",
+  "author": "cks",
+  "license": "SEE LICENSE IN LICENSE.txt",
+    "publishConfig": {
+        "registry":"https://npm.pkg.github.com"
+    },
+    "dependencies": {
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.2",
+    "@babel/preset-react": "^7.16.7"
+  }
+}
