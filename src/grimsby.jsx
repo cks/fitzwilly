@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from "prop-types";
+import Consumer from "fusion:consumer";
 
 class Grimsby extends Component {
     constructor (props) {
@@ -15,9 +16,11 @@ class Grimsby extends Component {
         this.setState(({ isGrim }) => ({ isGrim: !isGrim }))
     }
 
-    render() {
+    async render() {
         console.log("Grimsby.render()");
         const { isGrim } = this.state;
+
+        const content = await fetchContent({grim:isGrim});
         
         const grimButton = (
             <button onClick={this.toggleGrim.bind(this)}>
@@ -42,4 +45,4 @@ Grimsby.propTypes = {
     })
 };
 
-export default Grimsby;
+export default Consumer(Grimsby);
