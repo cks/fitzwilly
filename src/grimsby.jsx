@@ -22,7 +22,7 @@ class Grimsby extends Component {
         });
     }
 
-    async componentDidMount() {
+    componentDidMount() {
         console.log("Grimsby.componentDidMount()");
     }
 
@@ -31,7 +31,7 @@ class Grimsby extends Component {
         this.setState(({ isGrim }) => ({ isGrim: !isGrim }))
     }
 
-    async render() {
+    render() {
         console.log("Grimsby.render()");
         const { isGrim, times } = this.state;
 
