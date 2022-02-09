@@ -1,1 +1,1 @@
-export { default as DickVanDyke } from './dickvandkye.jsx';
+export { default as DickVanDyke } from './dickvandyke.jsx';
