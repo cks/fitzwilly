@@ -14,7 +14,7 @@ class Grimsby extends Component {
     }
 
     fetch() {
-        fetchContent({
+        this.fetchContent({
             times: {
                 source: 'interesting-times',
                 query: { grim: true }
