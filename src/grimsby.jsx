@@ -9,7 +9,7 @@ class Grimsby extends Component {
     }
 };
 
-Buckmaster.label = "Grimsby B. Grimsby";
+Grimsby.label = "Grimsby B. Grimsby";
 
 Grimsby.propTypes = {
     customFields: PropTypes.shape({
