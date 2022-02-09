@@ -1,6 +1,6 @@
 {
     "name": "@cks/fitzwilly",
-    "version": "0.0.14",
+    "version": "0.0.15",
     "description": "Inspired by the movie of the same name.",
     "main": "dist/index.js",
     "author": "cks",
