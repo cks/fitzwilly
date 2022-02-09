@@ -1,8 +1,8 @@
 {
-    "name": "fitzwilly",
+    "name": "@cks/fitzwilly",
     "version": "0.0.1",
     "description": "Inspired by the movie of the same name.",
-    "main": "index.js",
+    "main": "dist/index.js",
     "author": "cks",
     "repository": "git://github.com/cks/fitzwilly.git",
     "publishConfig": {
