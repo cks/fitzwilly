@@ -8,7 +8,22 @@ class Grimsby extends Component {
         console.log("Grimsby.constructor()");
         this.toggleGrim = this.toggleGrim.bind(this)
         const { grimByDefault = false } = this.props.customFields;
-        this.state = { isGrim: grimByDefault };
+        this.state = { isGrim: grimByDefault, times: [] };
+        this.fetch = this.fetch.bind(this);
+        this.fetch();
+    }
+
+    fetch() {
+        fetchContent({
+            times: {
+                source: 'interesting-times',
+                query: { grim: true }
+            }
+        });
+    }
+
+    async componentDidMount() {
+        console.log("Grimsby.componentDidMount()");
     }
 
     toggleGrim () {
@@ -18,11 +33,10 @@ class Grimsby extends Component {
 
     async render() {
         console.log("Grimsby.render()");
-        const { isGrim } = this.state;
+        const { isGrim, times } = this.state;
 
-        const content = await fetchContent({grim:isGrim});
-        console.log("Grimsby.render():content:", content);
-        
+        console.log("Grimsby.render():times:", times);
+
         const grimButton = (
             <button onClick={this.toggleGrim.bind(this)}>
                 {isGrim ? 'Less Grim' : 'More Grim'}
@@ -33,7 +47,7 @@ class Grimsby extends Component {
             <div>
                 <h3>Grimsby { isGrim ? ":-(" : ":-)" }</h3>
                 <div>{grimButton}</div>
-                <div>content: {JSON.stringify(content) }</div>
+                <div>times: {JSON.stringify(times) }</div>
             </div>
         )
     }
