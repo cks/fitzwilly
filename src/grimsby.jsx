@@ -21,6 +21,7 @@ class Grimsby extends Component {
         const { isGrim } = this.state;
 
         const content = await fetchContent({grim:isGrim});
+        console.log("Grimsby.render():content:", content);
         
         const grimButton = (
             <button onClick={this.toggleGrim.bind(this)}>
@@ -32,6 +33,7 @@ class Grimsby extends Component {
             <div>
                 <h3>Grimsby { isGrim ? ":-(" : ":-)" }</h3>
                 <div>{grimButton}</div>
+                <div>content: {JSON.stringify(content) }</div>
             </div>
         )
     }
