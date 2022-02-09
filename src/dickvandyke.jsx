@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from "prop-types";
 
 class DickVanDyke extends Component {
     render() {
@@ -9,5 +10,14 @@ class DickVanDyke extends Component {
 };
 
 DickVanDyke.label = "DickVanDyke";
+
+DickVanDyke.propTypes = {
+    customFields: PropTypes.shape({
+        showExtendedInfo: PropTypes.bool,
+        actFunny: PropTypes.bool,
+        actSerious: PropTypes.bool,
+        awfulCockneyAccent: PropTypes.bool
+    })
+};
 
 export default DickVanDyke;
