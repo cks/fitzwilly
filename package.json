@@ -1,15 +1,18 @@
 {
     "name": "@cks/fitzwilly",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "Inspired by the movie of the same name.",
     "main": "dist/index.js",
     "author": "cks",
     "repository": "git://github.com/cks/fitzwilly.git",
     "publishConfig": {
-        "registry":"https://npm.pkg.github.com"
+        "registry": "https://npm.pkg.github.com"
     },
     "license": "SEE LICENSE IN LICENSE.txt",
     "dependencies": {
+        "@babel/plugin-proposal-class-properties": "^7.16.7",
+        "@babel/plugin-proposal-optional-chaining": "^7.16.7",
+        "@babel/preset-env": "^7.16.11",
         "prop-types": "^15.8.1",
         "react": "^17.0.2"
     },
